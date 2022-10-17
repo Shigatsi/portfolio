@@ -1,0 +1,130 @@
+@import "../../utils/scss/constant.scss";
+.navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+
+  padding: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: fixed;
+  z-index: 2;
+
+  &__logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    img {
+      width: 90px;
+      height: 20px;
+
+      @media screen and (min-width: 2000px) {
+        width: 180px;
+        height: 40px;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    list-style: none;
+
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
+  }
+
+  &__item {
+    margin: 0 1rem;
+    cursor: pointer;
+  }
+
+  &__item-link {
+    color: $gray-color;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+.navigation__menu {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: $secondary-color;
+
+  svg {
+    width: 70%;
+    height: 70%;
+    color: $white-color;
+    cursor: pointer;
+  }
+
+  div {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+
+    padding: 1rem;
+
+    width: 80%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    background: url("../../assets/bgWhite.png");
+    background-color: $white-color;
+    background-size: cover;
+    background-repeat: repeat;
+
+    box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
+
+    svg {
+      width: 35px;
+      height: 35px;
+      color: $secondary-color;
+      cursor: pointer;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    @media screen and (min-width: 900px) {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    display: none;
+  }
+}

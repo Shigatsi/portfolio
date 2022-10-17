@@ -1,0 +1,14 @@
+@import './utils/scss/constant.scss';
+
+.app {
+    background-color: $primary-color;
+}
+
+
+.app__whitebg {
+    background-color: $white-color;
+}
+  
+.app__primarybg {
+    background-color: $primary-color;
+}
