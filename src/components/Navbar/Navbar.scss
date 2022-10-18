@@ -1,4 +1,6 @@
 @import "../../utils/scss/constant.scss";
+@import "../../utils/scss/mixins.scss";
+
 .navigation {
   width: 100%;
   display: flex;
@@ -14,9 +16,7 @@
   z-index: 2;
 
   &__logo {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    @include flex-center;
 
     img {
       width: 90px;
@@ -62,10 +62,8 @@
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  display: flex;
   position: relative;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
   background-color: $secondary-color;
 
   svg {

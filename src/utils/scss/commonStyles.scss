@@ -1,0 +1,32 @@
+@import './constant.scss';
+
+.p-text {
+    font-size: 0.8rem;
+  text-align: left;
+  color: var(--gray-color);
+  line-height: 1.5;
+
+  @media screen and (min-width: 2000px) {
+    font-size: 1.75rem;
+  }
+}
+
+.head-text {
+    font-size: 2.75rem;
+    font-weight: 800;
+    text-align: center;
+    color: $black-color;
+    text-transform: capitalize;
+
+    span {
+        color: $secondary-color;
+    }
+
+    @media screen and (min-width: 2000px) {
+        font-size: 4rem;
+    }
+
+    @media screen and (max-width: 450px) {
+        font-size: 2rem;
+  }
+}
