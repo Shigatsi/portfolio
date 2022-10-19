@@ -31,7 +31,7 @@ const Header: React.FC = () => {
               <h1 className="head-text">Eugenia</h1>
             </div>
           </div>
-          <div className="header__about">
+          <div className="header__tags">
             <p className="p-text">Web Developer</p>
             <p className="p-text">Freelancer</p>
           </div>
@@ -42,7 +42,7 @@ const Header: React.FC = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="header__img"
       >
-        <img src={images.profile} alt="profile_bg" />
+        <img   className="header__img-profile" src={images.profile} alt="profile_bg" />
         <motion.img
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: 'easeInOut' }}
