@@ -28,7 +28,7 @@ const Header: React.FC = () => {
             <span>&#128075;</span>
             <div className="header__greeting">
               <p className="p-text">Hello, I am</p>
-              <h1 className="head-text">Eugenia</h1>
+              <h1 className="head-text">Evgenia</h1>
             </div>
           </div>
           <div className="header__tags">
