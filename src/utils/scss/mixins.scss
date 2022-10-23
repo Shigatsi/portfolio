@@ -1,6 +1,22 @@
+@import '../scss/constant.scss';
+
 @mixin flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+@mixin bold-text {
+    font-size: 1rem;
+    font-weight: 800;
+    color: $black-color;
+    text-align: left;
+  
+    @media screen and (min-width: 2000px) {
+      font-size: 2rem;
+    }
+  
+    @media screen and (max-width: 450px) {
+      font-size: 0.9rem;
+    }
+}
