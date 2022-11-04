@@ -3,15 +3,17 @@ import { motion } from "framer-motion";
 
 import { urlFor, client } from "../../client";
 import "./About.scss";
+import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 
 interface IAbouts {
   title: string;
   description: string;
-  img:string;
+  imgUrl:SanityImageSource;
 }
 
 const About: React.FC = () => {
   const [abouts, setAbouts] = React.useState<IAbouts[]>([]);
+  console.log('abouts', abouts.map(a=> urlFor(a.imgUrl).options.baseUrl))
 
   React.useEffect(() => {
     const query = '*[_type == "abouts"]';
@@ -28,8 +30,6 @@ const About: React.FC = () => {
       </h2>
       <div className="about__profiles">
         {abouts.map((about, index) => (
-          <>
-          {console.log('urlFor(about.img)', urlFor(about.img).options.baseUrl)}
           <motion.div
             whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
@@ -38,13 +38,12 @@ const About: React.FC = () => {
             key={about.title + index}
           >
             
-            <img src={urlFor(about.img).options.baseUrl} alt={about.title} />
+            <img src={urlFor(about.imgUrl).url()} alt={about.title} />
             <h2 className="about__profile-item-title">{about.title}</h2>
             <p className="about__profile-item-text p-text">
               {about.description}
             </p>
           </motion.div>
-          </>
         ))}
       </div>
     </>
