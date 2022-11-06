@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
     <nav className="navigation">
       <img src={images.logo} alt="" className="navigation__logo" />
       <ul className="navigation__links">
-        {["home", "about", "contact", "work", "skills", "works"].map(
+        {["home", "about", "contact", "work", "skills", "works", "testimonials", "contacts"].map(
           (navItem) => (
             <li key={`link-${navItem}`} className="navigation__item">
               <a href={`#${navItem}`} className="navigation__item-link">
