@@ -1,6 +1,10 @@
 import React from "react";
 
-const NavigationDots: React.FC = ({ active: boolean }) => {
+const NavigationDots: React.FC<{ active: string }> = ({
+  active,
+}: {
+  active: string;
+}) => {
   return (
     <div className="navigation__dots">
       {[
