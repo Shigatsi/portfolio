@@ -1,5 +1,7 @@
 import React from 'react';
-import { BsTelegram, BsMailbox2, BsLinkedin } from 'react-icons/bs'
+import { BsTelegram, BsMailbox2, BsLinkedin } from 'react-icons/bs';
+
+import './SocialMedia.scss';
 
 const SocialMedia: React.FC = () => {
   return (

@@ -1,4 +1,5 @@
 import React from "react";
+import './NavigationDots.scss';
 
 const NavigationDots: React.FC<{ active: string }> = ({
   active,
@@ -18,7 +19,7 @@ const NavigationDots: React.FC<{ active: string }> = ({
         "contacts",
       ].map((item, index) => (
         <a
-          key={`#${item}`}
+          key={item+index}
           href={`#${item}`}
           className={`navigation__dot ${
             active === item ? "navigation__dot_active" : ""

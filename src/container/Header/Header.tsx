@@ -2,18 +2,20 @@ import React from "react";
 import { motion } from "framer-motion";
 import { images } from "../../utils/constants/index.js";
 
+import { AppWrapper } from "../../wrapper";
+
 import "./Header.scss";
 
 const scaleVariants = {
   whileInView: {
-    scale: [0,1],
-    opacity: [0,1],
+    scale: [0, 1],
+    opacity: [0, 1],
     transition: {
       duration: 1,
-      ease:'easeInOut'
-    }
-  }
-}
+      ease: "easeInOut",
+    },
+  },
+};
 
 const Header: React.FC = () => {
   return (
@@ -42,28 +44,29 @@ const Header: React.FC = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="header__img"
       >
-        <img   className="header__img-profile" src={images.profile} alt="profile_bg" />
+        <img
+          className="header__img-profile"
+          src={images.profile}
+          alt="profile_bg"
+        />
         <motion.img
           whileInView={{ scale: [0, 1] }}
-          transition={{ duration: 1, ease: 'easeInOut' }}
+          transition={{ duration: 1, ease: "easeInOut" }}
           src={images.circle}
-          className='header__overlay-circle'
+          className="header__overlay-circle"
         />
       </motion.div>
       <motion.div
-      variants={scaleVariants}
-      whileInView={scaleVariants.whileInView}
-      className="header__circles"
+        variants={scaleVariants}
+        whileInView={scaleVariants.whileInView}
+        className="header__circles"
       >
-        {
-          [images.react, images.sass, images.typescript].map((circle, i)=>(
-            <div className="header__circle-cmp" key={i}>
-              <img src={circle} alt="circle" />
-            </div>
-          ))
-        }
+        {[images.react, images.sass, images.typescript].map((circle, i) => (
+          <div className="header__circle-cmp" key={i}>
+            <img src={circle} alt="circle" />
+          </div>
+        ))}
       </motion.div>
-   
     </section>
   );
 };

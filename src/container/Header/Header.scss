@@ -4,8 +4,8 @@
 .header {
     position: relative;
     background:  url('../../assets/bgIMG.png');
-    background-size: cover;
-    background-repeat: center;
+    background-size:cover;
+    // background-repeat: center;
 
     width: 100%;
     @include flex-center;
