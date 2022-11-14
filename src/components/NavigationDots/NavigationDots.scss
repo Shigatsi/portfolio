@@ -31,12 +31,10 @@
 }
 
 @media screen and (max-width: 500px) {
-  .app__navigation,
-  .app__social {
+  .navigation__dots
+   {
     display: none;
   }
 
-  .copyright {
-    padding: 2rem;
-  }
+ 
 }

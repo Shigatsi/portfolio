@@ -19,7 +19,7 @@ const scaleVariants = {
 
 const Header: React.FC = () => {
   return (
-    <section className="header">
+    <section id ='home' className="header">
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
@@ -71,4 +71,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+export default AppWrapper(Header, "home");
